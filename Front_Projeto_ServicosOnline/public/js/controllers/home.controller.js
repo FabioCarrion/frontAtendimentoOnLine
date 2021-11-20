@@ -16,6 +16,7 @@
         vm.bairrosPage = bairrosPage;
         vm.logradourosPage = logradourosPage;
         vm.pessoasPage = pessoasPage;
+        vm.receitasPage = receitasPage;
 
         activate();
 
@@ -50,5 +51,8 @@
             $location.path("/pessoa");
         }
 
+        function receitasPage() {
+            $location.path("/receita");
+        }
     }
 })();

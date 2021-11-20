@@ -73,6 +73,15 @@ angular
             .when("/pessoa/new", {
                 templateUrl: "partials/pessoa-form.html",
             })
+            .when("/receita", {
+                templateUrl: "partials/receita.html",
+            })
+            .when("/receita/:id", {
+                templateUrl: "partials/receita-form.html",
+            })
+            .when("/receita/new", {
+                templateUrl: "partials/receita-form.html",
+            })
             .otherwise({
                 templateUrl: "partials/404.html",
             });

@@ -30,7 +30,7 @@
                             <tbody>
                                 <tr ng-repeat="item in vm.itens">
                                     <td>{{item.nome}}</td>
-                                    <td>{{item.tipoPessoa}}</td>
+                                    <td>{{item.pessoa.tipoPessoa}}</td>
                                     <td>
                                         <a type="button" class="btn btn-primary btn-sm" ng-href="{{'/pessoa/' + item.id}}">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
