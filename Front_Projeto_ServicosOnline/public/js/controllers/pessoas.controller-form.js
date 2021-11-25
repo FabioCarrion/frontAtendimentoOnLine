@@ -37,12 +37,35 @@
 
         function salvar() {
             PessoaService.save(vm.pessoa).success(function () {
+                var files = document.getElementById('imagem').files;
+                if (files.length > 0) {
+                  getBase64(files[0]);
+                };
+                function getBase64(file) {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function () {
+                      console.log(reader.result);
+                    };
+                    reader.onerror = function (error) {
+                      console.log('Error: ', error);
+                    };
+                 }   
+
                 $location.path("/pessoa");
                 alert("Contribuinte cadastrado com sucesso!!");
             }).error(function (erro) {
                 alert(JSON.stringify(erro));
             });
+
+           
+              
+               
         }
+
+      
+
+        
 
     function select(valor){
         return '"'+valor+'"';
