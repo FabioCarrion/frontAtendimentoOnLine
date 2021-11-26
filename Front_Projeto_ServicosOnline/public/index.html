@@ -60,6 +60,15 @@
 
     <script src="/js/controllers/home.controller.js"></script>
 
+    <script>
+        $('#bsalert').on('close.bs.alert', toggleAlert)
+    
+        function toggleAlert() {
+            $(".alert").toggleClass('in out');
+            return false; // Keep close.bs.alert event from removing from DOM
+        }
+    </script>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b, o, i, l, e, r) {
