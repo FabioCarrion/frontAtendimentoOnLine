@@ -36,22 +36,14 @@
         }
 
         function salvar() {
-            PessoaService.save(vm.pessoa).success(function () {
-                var files = document.getElementById('imagem').files;
-                if (files.length > 0) {
-                  getBase64(files[0]);
-                };
-                function getBase64(file) {
-                    var reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    reader.onload = function () {
-                      console.log(reader.result);
-                    };
-                    reader.onerror = function (error) {
-                      console.log('Error: ', error);
-                    };
-                 }   
+            let imagem = "";
+            var files = document.getElementById('imagem').files;
+            if (files.length > 0) {
+                imagem = await getBase64(files[0]);
+            };
 
+            vm.pessoa.imagem = imagem;
+            PessoaService.save(vm.pessoa).success(function () {
                 $location.path("/pessoa");
                 alert("Contribuinte cadastrado com sucesso!!");
             }).error(function (erro) {
@@ -63,7 +55,18 @@
                
         }
 
-      
+        function getBase64(file) {
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+              console.log(reader.result);
+              return reader.result
+            };
+            reader.onerror = function (error) {
+              console.log('Error: ', error);
+              return error;
+            };
+         } 
 
         
 
