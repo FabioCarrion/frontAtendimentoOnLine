@@ -1,4 +1,4 @@
-function () {
+(function () {
     "use strict";
 
     angular
@@ -58,14 +58,7 @@ function () {
                 alert(JSON.stringify(erro));
             });
 
-           
-              
-               
         }
-
-      
-
-        
 
     function select(valor){
         return '"'+valor+'"';
