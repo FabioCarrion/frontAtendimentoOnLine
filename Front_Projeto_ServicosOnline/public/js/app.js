@@ -5,12 +5,17 @@ angular
 
         $routeProvider
             .when("/", {
-                templateUrl: "partials/home.html",
+                templateUrl: "partials/login.html",
+                controller:"LoginCtrl"
+            })
+            .when("/login", {
+                templateUrl: "partials/login.html",
+                controller:"LoginCtrl"
             })
             .when("/home", {
                 templateUrl: "partials/home.html",
             })
-            .when("/cidade", {
+           .when("/cidade", {
                 templateUrl: "partials/cidade.html",
             })
             .when("/cidade/:id", {

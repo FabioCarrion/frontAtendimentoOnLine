@@ -13,6 +13,8 @@
 
 <body ng-app="MyApp">
     <div ng-include src="'partials/header.html'"></div>
+    <div id="divPrincipal" style="position: absolute; margin-top: 0.7em;margin-left: 1.1em; z-index: 3; font-size: 24px;">
+    </div>
     <div ng-view></div>
 
     <div ng-include src="'partials/footer.html'"></div>
@@ -58,6 +60,7 @@
     <script src="/js/controllers/receitas.controller.js"></script>
     <script src="/js/services/receitas.service.js"></script>
 
+    <script src="/js/controllers/login.controller.js"></script>
     <script src="/js/controllers/home.controller.js"></script>
 
     <script>
