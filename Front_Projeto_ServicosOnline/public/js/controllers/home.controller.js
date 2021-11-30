@@ -17,11 +17,16 @@
         vm.logradourosPage = logradourosPage;
         vm.pessoasPage = pessoasPage;
         vm.receitasPage = receitasPage;
+        vm.isAdministrador = isAdministrador;
 
         activate();
 
         function activate() {
         }
+
+        function isAdministrador (){
+            return $window.localStorage.administrador;
+        };
 
         function cidadesPage() {
             $location.path("/cidade");
