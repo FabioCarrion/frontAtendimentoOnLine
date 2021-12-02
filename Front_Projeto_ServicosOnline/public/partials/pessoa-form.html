@@ -131,6 +131,10 @@
                                 <label for="Documento" class="col-sm-2">Documento</label>
                                 <input class="btn btn-success btn-lg" type="file" ng-model="vm.pessoa.imagem" id="imagem" >
                             </div>
+                            <div class = "form-group">
+                                <img ng-src="{{vm.pessoa.imagem}}">
+                            </div>
+
                             <div class="text-right col-sm-10">
                                 <a href="/pessoa" class="btn btn-default btn-lg">Cancelar</a>
                                 <button ng-click="vm.salvar()" type="button" class="btn btn-success btn-lg">Salvar</button>

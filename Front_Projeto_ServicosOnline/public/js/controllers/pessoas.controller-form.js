@@ -9,13 +9,17 @@
         "PessoaService",
         "$location",
         "$routeParams",
+        "$timeout",
         "$scope",
+        
     ];
 
     function PessoaFormController(
         PessoaService,
         $location,
-        $routeParams
+        $routeParams,
+        $timeout
+
     ) {
         var vm = this;
         vm.pessoa = {};
@@ -35,28 +39,32 @@
             }
         }
 
+        function getBase64(file) {
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+            vm.pessoa.imagem = reader.result
+                console.log(reader.result);
+            };
+            reader.onerror = function (error) {
+              console.log('Error: ', error);
+            };
+         }  
+
         function salvar() {
-            PessoaService.save(vm.pessoa).success(function () {
-                var files = document.getElementById('imagem').files;
+            var files = document.getElementById('imagem').files;
                 if (files.length > 0) {
                   getBase64(files[0]);
                 };
-                function getBase64(file) {
-                    var reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    reader.onload = function () {
-                      console.log(reader.result);
-                    };
-                    reader.onerror = function (error) {
-                      console.log('Error: ', error);
-                    };
-                 }   
-
-                $location.path("/pessoa");
-                alert("Contribuinte cadastrado com sucesso!!");
-            }).error(function (erro) {
-                alert(JSON.stringify(erro));
-            });
+                $timeout(function(){
+                    PessoaService.save(vm.pessoa).success(function () {
+                        $location.path("/pessoa");
+                        alert("Contribuinte cadastrado com sucesso!!");
+                    }).error(function (erro) {
+                        alert(JSON.stringify(erro));
+                    });
+                },10)
+            
 
         }
 
