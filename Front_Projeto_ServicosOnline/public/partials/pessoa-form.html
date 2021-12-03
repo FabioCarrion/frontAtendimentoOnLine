@@ -137,6 +137,10 @@
 
                             <div class="text-right col-sm-10">
                                 <a href="/pessoa" class="btn btn-default btn-lg">Cancelar</a>
+                                <a href="/pessoa" type="button" class="btn btn-default btn-lg" confirmed-click="vm.remover(item)" 
+                                        ng-confirm-click="Deseja excluir o contribuinte?">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </a>
                                 <button ng-click="vm.salvar()" type="button" class="btn btn-success btn-lg">Deferir</button>
                             </div>
                         </form>
