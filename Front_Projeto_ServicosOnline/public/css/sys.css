@@ -1,0 +1,20 @@
+.navbar.navbar-inverse {
+    background-color: #142c48;
+    }
+
+    .navbar.navbar-inverse .navbar-nav>a {
+        color: #fff;
+    }
+    .navbar.navbar-inverse .navbar-nav>.active>a {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .navbar.navbar-inverse .navbar-nav>.active>a:hover{
+        background-color: #fff;
+        color: #000
+    }
+
+    .navbar-inverse .navbar-brand {
+        color: #fff;
+    }
