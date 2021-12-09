@@ -105,7 +105,7 @@ var calendar = $('#calendar').fullCalendar({
     events: function(start, end, timezone, callback) {
         $.ajax({
             type: "get",
-            url: "https://servicoonline.herokuapp.com/api/usuarios",
+            url: "http://localhost:3000/api/usuarios",
             data: {
                 // 화면이 바뀌면 Date 객체인 start, end 가 들어옴
                 startDate: moment(new Date()).format('YYYY-MM-DD'),

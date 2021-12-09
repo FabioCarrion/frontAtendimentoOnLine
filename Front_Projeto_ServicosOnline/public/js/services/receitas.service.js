@@ -15,7 +15,7 @@
             remove: remove
         };
 
-        var URL = 'https://servicoonline.herokuapp.com/api/receitas';
+        var URL = 'http://localhost:3000/api/receitas';
 
         return service;
 
