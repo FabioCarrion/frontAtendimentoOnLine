@@ -15,7 +15,7 @@
             remove: remove
         };
 
-        var URL = 'https://servicoonline.herokuapp.com/api/municipios';
+        var URL = 'http://localhost:3000/api/municipios';
 
         return service;
 
