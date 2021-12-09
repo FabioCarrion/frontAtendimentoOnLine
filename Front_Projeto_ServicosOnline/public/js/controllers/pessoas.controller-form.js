@@ -58,7 +58,7 @@
                 };
                 $timeout(function(){
                     PessoaService.save(vm.pessoa).success(function () {
-                        $location.path("/pessoa");
+                        $location.path("/home");
                         message('sucesso', 'Contribuinte cadastrado com sucesso!');
                     }).error(function (erro) {
                         let msg = erro;
