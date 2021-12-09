@@ -15,7 +15,7 @@
             remove: remove
         };
 
-        var URL = 'http://localhost:8080/api/distritos';
+        var URL = 'https://servicoonline.herokuapp.com/api/distritos';
 
         return service;
 

@@ -15,7 +15,7 @@
             remove: remove
         };
 
-        var URL = 'http://localhost:8080/api/logradouros';
+        var URL = 'https://servicoonline.herokuapp.com/api/logradouros';
 
         return service;
 
