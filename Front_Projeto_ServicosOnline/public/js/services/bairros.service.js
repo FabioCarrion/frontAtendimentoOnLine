@@ -15,7 +15,7 @@
             remove: remove
         };
 
-        var URL = 'https://servicoonline.herokuapp.com/api/bairros';
+        var URL = 'http://localhost:3000/api/bairros';
 
         return service;
 
