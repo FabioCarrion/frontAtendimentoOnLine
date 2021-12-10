@@ -8,19 +8,19 @@
                         <br>
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label for="nome" class="col-sm-2">Nome</label>
+                                <label for="nome" class="col-sm-2">Nome<font color="#FF0000"> *</font></label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control text-left" ng-model="vm.estado.nome" id="nome">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="sigla" class="col-sm-2">Sigla</label>
+                                <label for="sigla" class="col-sm-2">Sigla<font color="#FF0000"> *</font></label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control text-left" ng-model="vm.estado.sigla" id="sigla">
                                 </div>
                             </div>
                             <div class="form-group" >
-                                <label for="pais" class="col-sm-2">País</label>
+                                <label for="pais" class="col-sm-2">País<font color="#FF0000"> *</font></label>
                                 <div class="col-sm-8" ng-controller="PaisListController as pasVM">
                                     <select name="pais" ng-model="vm.estado.pais.id" class="form-control" id="pais">
                                         <option ng-repeat="item in pasVM.itens" value={{item.id}}>{{item.id}} - {{item.nome}}</option>
